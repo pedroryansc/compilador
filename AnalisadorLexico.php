@@ -10,15 +10,16 @@
             'q1' => 'ID', 
             
             // Palavras reservadas
-            'q3' => 'SE', 'q6' => 'SENAO', 'q10' => 'FACA', 'q18' => 'ENQUANTO', 'q24' => 'ESCREVA', 'q31' => 'IMPRIMA', 'q34' => 'VAR', 'q38' => 'LEIA',
-            'q42' => 'LEIA', 'q49' => 'ESCREVA', 'q56' => 'ENQUANTO', 'q58' => 'SE', 'q61' => 'SENAO', 'q65' => 'FACA', 'q72' => 'IMPRIMA', 'q75' => 'VAR',
+            'q9' => 'PROGRAMA', 'q14' => 'VAR', 'q19' => 'TIPO', 'q23' => 'TIPO', 'q28' => 'TIPO', 'q84' => 'FUNCAO', 'q33' => 'TIPO',
+            'q43' => 'LEIA', 'q52' => 'ESCREVA', 'q79' => 'ENQUANTO', 'q54' => 'SE', 'q72' => 'PARA', 'q91' => 'RETORNA',
 
             // Constantes
-            'q76' => 'CONST',
+            'q35' => 'CONST', 'q94' => 'CONST',
 
-            // Operadores
-            'q77' => 'ABRE_PARENTESES', 'q78' => 'FECHA_PARENTESES', 'q79' => 'ABRE_COLCHETES', 'q80' => 'FECHA_COLCHETES', 'q81' => 'ABRE_CHAVES', 'q82' => 'FECHA_CHAVES', 'q83' => 'VIRGULA', 'q84' => 'PONTO', 'q85' => 'PONTO_VIRGULA', 
-            'q86' => 'ASPAS_DUPLAS', 'q87' => 'NEGACAO', 'q88' => 'MULTIPLICACAO', 'q89' => 'ADICAO', 'q90' => 'SUBTRACAO', 'q91' => 'DIVISAO', 'q92' => "RESTO_DIVISAO", 'q93' => 'ATRIBUICAO', 'q94' => 'IGUALDADE', 'q95' => 'AND', 'q99' => 'ESPACO'
+            // Caracteres especiais e Operadores
+            'q44' => 'ABRE_PARENTESES', 'q45' => 'FECHA_PARENTESES', 'q38' => 'ABRE_COLCHETES', 'q39' => 'FECHA_COLCHETES', 'q10' => 'ABRE_CHAVES', 'q11' => 'FECHA_CHAVES', 'q37' => 'VIRGULA', 'q34' => 'PONTO_VIRGULA', 
+            'q36' => 'ASPA', 'q63' => 'NEGACAO', 'q57' => 'MULTIPLICACAO', 'q55' => 'ADICAO', 'q56' => 'SUBTRACAO', 'q58' => 'DIVISAO', 'q59' => "RESTO_DIVISAO", 'q15' => 'ATRIBUICAO', 'q16' => 'IGUALDADE', 'q60' => 'AND',
+            'q62' => 'OR', 'q64' => 'DIFERENCA', 'q65' => 'MAIOR', 'q66' => 'MENOR', 'q67' => 'MAIOR_IGUAL', 'q68' => 'MENOR_IGUAL', 'q99' => 'ESPACO'
         ];
 
         public function __construct(){
