@@ -1,6 +1,7 @@
 <?php
-    require_once "Automato.php";
-    require_once "Token.php";
+    require_once __DIR__."/Automato.php";
+    
+    require_once __DIR__."/Token.php";
 
     class AnalisadorLexico{
 
@@ -10,7 +11,7 @@
             'q1' => 'ID', 
             
             // Palavras reservadas
-            'q9' => 'PROGRAMA', 'q14' => 'VAR', 'q19' => 'TIPO', 'q23' => 'TIPO', 'q28' => 'TIPO', 'q84' => 'FUNCAO', 'q33' => 'TIPO',
+            'q9' => 'PROGRAMA', 'q14' => 'VAR', 'q19' => 'INT', 'q23' => 'CHAR', 'q28' => 'FLOAT', 'q84' => 'FUNCAO', 'q33' => 'ARRAY',
             'q43' => 'LEIA', 'q52' => 'ESCREVA', 'q79' => 'ENQUANTO', 'q54' => 'SE', 'q72' => 'PARA', 'q91' => 'RETORNA',
 
             // Constantes
@@ -57,7 +58,7 @@
                     if(isset($this->automato->transicoes[$estadoAtual][$entrada[$i]]))
                         $estadoAtual = $this->automato->transicoes[$estadoAtual][$entrada[$i]];
 
-                    if(!isset($this->automato->transicoes[$estadoAtual][$proximoCaracter]) && $estadoAtual != "q0"){
+                    if(!isset($this->automato->transicoes[$estadoAtual][$proximoCaracter]) && $estadoAtual != "q0" && $estadoAtual != "q61"){
                         if($estadoAtual != 'q99'){ // Se o estado atual for o q99, o token de espaços não é adicionado ao vetor
                             $nomeToken = isset($this->tokensAceitos[$estadoAtual]) ? $this->tokensAceitos[$estadoAtual] : "ID";
 
@@ -67,9 +68,12 @@
                         $estadoAtual = "q0";
                         $lexema = "";
                     } else{
-                        if($estadoAtual == "q0"){
+                        if($estadoAtual == "q0" || $estadoAtual == "q61"){
                             $erros[] = new Token("", $lexema, $linha, $coluna);
                             $lexema = "";
+
+                            if($estadoAtual == "q61")
+                                $estadoAtual = "q0";
                         }
                     }
                 }

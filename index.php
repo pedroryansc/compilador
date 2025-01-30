@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    require_once "AnalisadorLexico.php";
+    require_once "analisadorLexico/AnalisadorLexico.php";
 
     $titulo = "Compilador";
 
@@ -32,6 +32,7 @@
         if(isset($_POST["codigo"]) && $codigo != ""){
             echo "<pre><p>".$codigo."</p></pre>";
     ?>
+    <h2>Análise Léxica</h2>
     <h3>Tokens:</h3>
     <pre class="box"><?php
         foreach($tokens as $token)
